@@ -1,13 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist_Sans } from "next/font/google"
+import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Toaster } from "@/components/toaster"
 
-const geistSans = Geist_Sans({ subsets: ["latin"], variable: "--font-geist-sans" })
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
   title: "Muhammad Anees - Independent Full-Stack Developer & AI Agent Developer",
@@ -61,7 +61,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} bg-background dark`}>
+      <body className={`${inter.className} bg-background dark`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Navigation />
           <main className="min-h-screen">{children}</main>
